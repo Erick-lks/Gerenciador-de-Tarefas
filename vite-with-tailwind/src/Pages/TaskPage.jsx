@@ -14,7 +14,7 @@ export default function TaskPage() {
   }
 
   return (
-    <div className="w-screen h-screen bg-slate-500 flex justify-center p-6 ">
+    <div className="w-screen h-screen bg-orange-400  flex justify-center p-6 ">
       <div className="w-[500px] space -y-5 ">
         <div className="flex justify-center relative mb-5">
           <button
@@ -27,9 +27,9 @@ export default function TaskPage() {
             Details the Task
           </h1>
         </div>
-        <div className="bg-slate-300 p-4 rounded-md shadow">
-          <h2 className="text-xl font-bold text-slate-600"> {title}</h2>
-          <p className="text-slate-600">{description}</p>
+        <div className="bg-pink-200 p-4 rounded-md shadow">
+          <h2 className="text-xl font-bold text-black"> {title}</h2>
+          <p className="text-slate-400">{description}</p>
         </div>
       </div>
     </div>
