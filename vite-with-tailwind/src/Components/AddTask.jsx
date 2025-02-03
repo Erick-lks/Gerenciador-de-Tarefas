@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "./Inputs";
 
 export default function AddTask({ clickAddTask }) {
+  //estado para armazenar o título da tarefa e descrição
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   return (
@@ -28,10 +29,11 @@ export default function AddTask({ clickAddTask }) {
         onClick={() => {
           //Ckeck if the fields are empty
           if (title.trim() === "" || description.trim() === "") {
-            alert("Por favor, preencha todos os campos");
-            return;
+            return alert("Por favor, preencha todos os campos!");
           }
+          //add new task
           clickAddTask(title, description);
+          //clear the fields
           setTitle("");
           setDescription("");
         }}

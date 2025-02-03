@@ -1,9 +1,14 @@
 import { ListCheck, Trash } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import Button from "./Button";
+
+//the functions imports the homepage
 
 export default function Tasks(props) {
+  //navigate to the details page
   const navigate = useNavigate();
 
+  //function to navigate to the details page
   function onSeeDetails(task) {
     const query = new URLSearchParams();
     query.set("title", task.title);
@@ -23,12 +28,10 @@ export default function Tasks(props) {
           >
             {task.title}
           </button>
-          <button
-            onClick={() => onSeeDetails(task)}
-            className="bg-green-500 text-white  rounded-md p-3"
-          >
+          <Button onClick={() => onSeeDetails(task)}>
             <ListCheck />
-          </button>
+          </Button>
+
           <button
             onClick={() => props.onDeleleTaskClick(task.id)}
             className="bg-red-800 text-white  rounded-md p-3"

@@ -2,9 +2,13 @@ import "./App.css";
 import Tasks from "./Components/Tasks";
 import AddTask from "./Components/AddTask";
 import { useState, useEffect } from "react";
+
+import Title from "./Components/Title";
+//V4 to generate the id
 import { v4 } from "uuid";
 
 function App() {
+  //STATE for bring value the tasks if closed the aplicattion
   const [tasks, setTasks] = useState(
     //Receiver the tasks from local storage
     JSON.parse(localStorage.getItem("tasks")) || []
@@ -68,9 +72,7 @@ function App() {
   return (
     <div className="w-screen h-screen bg-orange-200 flex justify-center p-8 ">
       <div className="w-[500px] space -y-5 ">
-        <h1 className="  text-3xl text-black m-5 font-bold text-center rounded-md p-4">
-          Gerenciador de Tarefas
-        </h1>
+        <Title>Gerenciador de Tarefas</Title>
 
         <AddTask clickAddTask={clickAddTask} />
 
